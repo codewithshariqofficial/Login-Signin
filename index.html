@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Authentication</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="theme-toggle">
+        <button id="theme-btn" title="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <main class="auth-container">
+        <!-- Login Form -->
+        <section class="form-box login active" id="login-box">
+            <form id="login-form">
+                <h2>Welcome Back</h2>
+                <p class="subtitle">Enter your details to stay connected</p>
+                
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <span class="error-msg">Please enter a valid email</span>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <span class="error-msg">Password is required</span>
+                </div>
+
+                <div class="form-options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-primary">Sign In</button>
+
+                <div class="social-login">
+                    <p>Or login with</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <p class="toggle-text">Don't have an account? <a href="#" id="to-signup">Sign Up</a></p>
+            </form>
+        </section>
+
+        <!-- Signup Form -->
+        <section class="form-box signup" id="signup-box">
+            <form id="signup-form">
+                <h2>Create Account</h2>
+                <p class="subtitle">Join our community today</p>
+
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="signup-name" placeholder="Full Name" required>
+                    <span class="error-msg">Name is required</span>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <span class="error-msg">Please enter a valid email</span>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <span class="error-msg">Minimum 8 characters</span>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-shield-alt"></i>
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+                    <span class="error-msg">Passwords do not match</span>
+                </div>
+
+                <button type="submit" class="btn-primary">Sign Up</button>
+
+                <p class="toggle-text">Already have an account? <a href="#" id="to-login">Login</a></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
