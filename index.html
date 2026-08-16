@@ -22,9 +22,11 @@
     <main class="auth-container">
         <!-- Login Form -->
         <section class="form-box login active" id="login-box">
-            <form id="login-form">
+            <form id="login-form" novalidate>
                 <h2>Welcome Back</h2>
                 <p class="subtitle">Enter your details to stay connected</p>
+                <p class="demo-hint">Demo: demo@example.com / demo1234</p>
+                <button type="button" class="btn-autofill" id="btn-autofill">Auto Fill</button>
                 
                 <div class="input-group">
                     <i class="fas fa-envelope"></i>
@@ -43,16 +45,9 @@
                     <a href="#" class="forgot-pass">Forgot Password?</a>
                 </div>
 
-                <button type="submit" class="btn-primary">Sign In</button>
+                <div class="form-message" id="login-message"></div>
 
-                <div class="social-login">
-                    <p>Or login with</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-google"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
+                <button type="submit" class="btn-primary">Sign In</button>
 
                 <p class="toggle-text">Don't have an account? <a href="#" id="to-signup">Sign Up</a></p>
             </form>
@@ -60,7 +55,7 @@
 
         <!-- Signup Form -->
         <section class="form-box signup" id="signup-box">
-            <form id="signup-form">
+            <form id="signup-form" novalidate>
                 <h2>Create Account</h2>
                 <p class="subtitle">Join our community today</p>
 
@@ -87,6 +82,8 @@
                     <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
                     <span class="error-msg">Passwords do not match</span>
                 </div>
+
+                <div class="form-message" id="signup-message"></div>
 
                 <button type="submit" class="btn-primary">Sign Up</button>
 
