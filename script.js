@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
-    const themeBtn = document.getElementById('theme-btn');
-    const htmlElement = document.documentElement;
-    const themeIcon = themeBtn.querySelector('i');
-
     const loginBox = document.getElementById('login-box');
     const signupBox = document.getElementById('signup-box');
     const toSignup = document.getElementById('to-signup');
@@ -12,38 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const signupForm = document.getElementById('signup-form');
 
-    // --- Hardcoded credentials (yahan apne email/password daalo) ---
+    // --- Hardcoded credentials ---
     const VALID_EMAIL = 'demo@example.com';
     const VALID_PASSWORD = 'demo1234';
-
-    // --- Safe Storage (localStorage fail hone par crash na ho) ---
-    const safeGet = (key) => {
-        try { return localStorage.getItem(key); } catch (e) { return null; }
-    };
-    const safeSet = (key, value) => {
-        try { localStorage.setItem(key, value); } catch (e) { /* ignore */ }
-    };
-
-    // --- Theme Management ---
-    const savedTheme = safeGet('theme') || 'light';
-    setTheme(savedTheme);
-
-    themeBtn.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-    });
-
-    function setTheme(theme) {
-        htmlElement.setAttribute('data-theme', theme);
-        safeSet('theme', theme);
-        
-        if (theme === 'dark') {
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
-        } else {
-            themeIcon.classList.replace('fa-sun', 'fa-moon');
-        }
-    }
 
     // --- Form Switching ---
     toSignup.addEventListener('click', (e) => {

@@ -329,33 +329,6 @@ h2 {
     text-decoration: none;
 }
 
-/* Theme Toggle */
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-#theme-btn {
-    width: 45px;
-    height: 45px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: 50%;
-    cursor: pointer;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-}
-
-#theme-btn:hover {
-    transform: rotate(30deg);
-}
-
 /* Responsive */
 @media (max-width: 480px) {
     .auth-container {

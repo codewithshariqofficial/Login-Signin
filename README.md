@@ -5,7 +5,6 @@ Premium authentication interface built with pure HTML, CSS, and JavaScript.
 ## Features
 
 - Glassmorphism card design with animated gradient background
-- Light / dark theme toggle (saved in `localStorage`)
 - Smooth transition between Login and Signup forms
 - Client-side validation (email format, required fields, password length, confirm match)
 - Real-time error clearing while typing
