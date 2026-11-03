@@ -163,8 +163,32 @@ h2 {
     box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
 }
 
-.input-group input:focus + i {
+.input-group:focus-within i:first-child {
     color: var(--primary-color);
+}
+
+/* Password show/hide toggle */
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1rem;
+    padding: 0;
+    transition: color 0.3s;
+    z-index: 2;
+}
+
+.toggle-password:hover {
+    color: var(--primary-color);
+}
+
+.input-group:has(.toggle-password) input {
+    padding-right: 45px;
 }
 
 .error-msg {

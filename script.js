@@ -66,6 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
         hideError(document.getElementById('login-password'));
     });
 
+    // --- Password Show/Hide Toggle ---
+    document.querySelectorAll('.toggle-password').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const input = btn.parentElement.querySelector('input');
+            const icon = btn.querySelector('i');
+            const isHidden = input.type === 'password';
+            input.type = isHidden ? 'text' : 'password';
+            icon.classList.toggle('fa-eye', !isHidden);
+            icon.classList.toggle('fa-eye-slash', isHidden);
+            btn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+        });
+    });
+
     // --- Validation Logic ---
     const validateEmail = (email) => {
         return String(email)

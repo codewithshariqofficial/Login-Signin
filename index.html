@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Login & Signup authentication UI built with HTML, CSS and JavaScript.">
     <title>Premium Authentication</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +15,7 @@
     </div>
 
     <div class="theme-toggle">
-        <button id="theme-btn" title="Toggle Theme">
+        <button id="theme-btn" title="Toggle Theme" aria-label="Toggle light/dark theme">
             <i class="fas fa-moon"></i>
         </button>
     </div>
@@ -22,26 +23,27 @@
     <main class="auth-container">
         <!-- Login Form -->
         <section class="form-box login active" id="login-box">
-            <form id="login-form" novalidate>
+            <form id="login-form" novalidate autocomplete="on">
                 <h2>Welcome Back</h2>
                 <p class="subtitle">Enter your details to stay connected</p>
                 <p class="demo-hint">Demo: demo@example.com / demo1234</p>
                 <button type="button" class="btn-autofill" id="btn-autofill">Auto Fill</button>
-                
+
                 <div class="input-group">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="email" id="login-email" placeholder="Email" required autocomplete="email">
                     <span class="error-msg">Please enter a valid email</span>
                 </div>
 
                 <div class="input-group">
                     <i class="fas fa-lock"></i>
-                    <input type="password" id="login-password" placeholder="Password" required>
+                    <input type="password" id="login-password" placeholder="Password" required autocomplete="current-password">
+                    <button type="button" class="toggle-password" aria-label="Show password"><i class="fas fa-eye"></i></button>
                     <span class="error-msg">Password is required</span>
                 </div>
 
                 <div class="form-options">
-                    <label><input type="checkbox"> Remember me</label>
+                    <label><input type="checkbox" id="remember-me"> Remember me</label>
                     <a href="#" class="forgot-pass">Forgot Password?</a>
                 </div>
 
@@ -55,31 +57,33 @@
 
         <!-- Signup Form -->
         <section class="form-box signup" id="signup-box">
-            <form id="signup-form" novalidate>
+            <form id="signup-form" novalidate autocomplete="on">
                 <h2>Create Account</h2>
                 <p class="subtitle">Join our community today</p>
 
                 <div class="input-group">
                     <i class="fas fa-user"></i>
-                    <input type="text" id="signup-name" placeholder="Full Name" required>
+                    <input type="text" id="signup-name" placeholder="Full Name" required autocomplete="name">
                     <span class="error-msg">Name is required</span>
                 </div>
-                
+
                 <div class="input-group">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <input type="email" id="signup-email" placeholder="Email" required autocomplete="email">
                     <span class="error-msg">Please enter a valid email</span>
                 </div>
 
                 <div class="input-group">
                     <i class="fas fa-lock"></i>
-                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <input type="password" id="signup-password" placeholder="Password" required autocomplete="new-password">
+                    <button type="button" class="toggle-password" aria-label="Show password"><i class="fas fa-eye"></i></button>
                     <span class="error-msg">Minimum 8 characters</span>
                 </div>
 
                 <div class="input-group">
                     <i class="fas fa-shield-alt"></i>
-                    <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required autocomplete="new-password">
+                    <button type="button" class="toggle-password" aria-label="Show password"><i class="fas fa-eye"></i></button>
                     <span class="error-msg">Passwords do not match</span>
                 </div>
 
