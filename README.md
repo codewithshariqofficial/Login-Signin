@@ -1,6 +1,6 @@
-# Login & Signup UI
+# Premium Authentication UI
 
-Premium authentication interface built with pure HTML, CSS, and JavaScript.
+A premium login and signup interface built with pure HTML, CSS, and JavaScript.
 
 ## Features
 
@@ -13,45 +13,35 @@ Premium authentication interface built with pure HTML, CSS, and JavaScript.
 - Inline success / error messages
 - Responsive layout
 
+## Tech Stack
+
+- HTML5
+- CSS3 (glassmorphism, animations, responsive)
+- Vanilla JavaScript
+
 ## Project Structure
 
 ```
-index.html   # Markup for both forms
-style.css    # Styling, themes, animations, responsive rules
-script.js    # Theme, validation, form switching, autofill, password toggle
+Login-Signin/
+├── index.html   # Markup for both forms
+├── style.css    # Styling, themes, animations, responsive rules
+└── script.js    # Theme, validation, form switching, autofill, password toggle
 ```
 
 ## Getting Started
 
-No build step required.
+1. Clone or download this repository.
+2. Open `index.html` in any modern browser.
+3. Try the demo autofill or create your own credentials.
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/codewithshariqofficial/Login-Signin.git
-   ```
-2. Open `index.html` in any browser, or serve locally:
-   ```bash
-   npx serve .
-   ```
+## Live Demo
 
-## Demo Credentials
-
-- Email: `demo@example.com`
-- Password: `demo1234`
-
-Click **Auto Fill** to populate them instantly.
-
-## Customization
-
-- Colors/themes: edit CSS variables in `:root` and `[data-theme="dark"]` in `style.css`
-- Credentials: update `VALID_EMAIL` and `VALID_PASSWORD` in `script.js`
-- Validation rules: adjust the submit handlers in `script.js`
-- Post-login redirect: uncomment the `window.location.href` line in `script.js`
-
-## Tech Stack
-
-HTML5, CSS3 (custom properties, glassmorphism, keyframes, media queries), Vanilla JavaScript (ES6+).
+https://login-signup-roan-two.vercel.app
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+**Code With Shariq Official** - [GitHub](https://github.com/codewithshariqofficial)
